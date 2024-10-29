@@ -2,8 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 import React, {useState} from 'react';
 import logo from "../assets/logo.png"
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function Login() {
+export default function Login({navigation}) {
 
   const [text, onChangeText] = useState('');
   const [number, onChangeNumber] = useState('');
@@ -38,7 +40,7 @@ export default function Login() {
           keyboardType="password"
         /> 
         </View>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('signup')}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <Text style={styles.signUpLink}>Don't have an account? Sigh Up</Text>
@@ -51,7 +53,7 @@ export default function Login() {
 const styles = StyleSheet.create({
     Logincontainer: {
     flex: 1,
-    backgroundColor: '#081029',
+    backgroundColor: '#060512',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingBottom: 20,
