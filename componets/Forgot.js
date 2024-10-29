@@ -5,7 +5,7 @@ import logo from "../assets/logo.png"
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function Login({navigation}) {
+export default function Forgot({navigation}) {
 
   const [text, onChangeText] = useState('');
   const [number, onChangeNumber] = useState('');
@@ -19,7 +19,7 @@ export default function Login({navigation}) {
       />
       </View>
       <View style={styles.innerContainer}>
-       <Text style={styles.loginText}>Login</Text>
+       <Text style={styles.loginText}>Forgot Password</Text>
        <View style={styles.inputContainer}>
         <View style={styles.innerInputContainer}>
         <Text style={styles.inputLable}>Email</Text>
@@ -30,7 +30,7 @@ export default function Login({navigation}) {
           placeholder="Enter email"
         />
         </View>
-        <View style={styles.innerInputContainer}>
+        {/* <View style={styles.innerInputContainer}>
           <Text style={styles.inputLable}>Password</Text>
          <TextInput
           style={styles.input}
@@ -39,12 +39,11 @@ export default function Login({navigation}) {
           placeholder="Enter password"
           keyboardType="password"
         /> 
-        </View>
-        <Text style={styles.forgotText}>Forgot Password?</Text>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('signup')}>
-          <Text style={styles.buttonText}>Login</Text>
+        </View> */}
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('login')}>
+          <Text style={styles.buttonText}>Reset Password</Text>
         </TouchableOpacity>
-        <Text style={styles.signUpLink}>Don't have an account? Sigh Up</Text>
+        <Text style={styles.signUpLink}>Remember Password? Sigh In</Text>
        </View>
       </View>
     </View>
@@ -60,14 +59,14 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   logoContainer: {
-    height: '40%',
+    height: '60%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: '18%'
   },
   innerContainer: {
-    height: '60%',
+    height: '40%',
     width: "94%",
     backgroundColor: "#fcfcfc",
     display: 'flex',

@@ -6,6 +6,7 @@ import Signup from './componets/Signup';
 import OnBoardingPage from './componets/OnboardingPage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Forgot from './componets/Forgot';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,10 +14,11 @@ export default function App() {
   const [isFirstLaunch, setIsFirstLaunch] = useState(null)
   return (
     <NavigationContainer>
-      <Stack.Navigator  initialRouteName="onboard">
+      <Stack.Navigator  initialRouteName="forgot">
       <Stack.Screen name="onboard" options={{ headerShown: false }}  component={OnBoardingPage} />
         <Stack.Screen name="login" options={{ headerShown: false }}  component={Login} />
         <Stack.Screen name="signup" options={{ headerShown: false }}  component={Signup} />
+        <Stack.Screen name="forgot" options={{ headerShown: false }}  component={Forgot} />      
       </Stack.Navigator>
     </NavigationContainer>
   );
