@@ -4,6 +4,7 @@ import Onboarding from 'react-native-onboarding-swiper';
 import Avater from '../assets/avater.png';
 import Avater2 from '../assets/avater2.png';
 import Avater3 from '../assets/avater3.png';
+import logo from "../assets/White.png";
 
 
 
@@ -14,22 +15,38 @@ export default function OnBoardingPage({navigation}) {
     onDone={() => navigation.navigate('login')}
   pages={[
     {
-      backgroundColor: '#0faac8',
-      image: <Image source={Avater} />,
-      title: 'Onboarding',
-      subtitle: 'Done with React Native Onboarding Swiper',
+      backgroundColor: '#060512',
+      image: (
+        <View style={styles.firstPageContainer}>
+          <Image source={logo} style={styles.logo} />
+          <Text style={styles.firstPageTitle}>Welcome to GigArtz</Text>
+        </View>
+      ),
+
     },
     {
-        backgroundColor: '#07305b',
-        image: <Image source={Avater2} />,
-        title: 'Onboarding2',
-        subtitle: 'Done with React Native Onboarding Swiper',
+        backgroundColor: '#060512',
+
+        title: 'Discover Event and Talent Discovery',
+        subtitle: 'Explore and experience the perfect gigs and performers',
       },
       {
         backgroundColor: '#060512',
-        image: <Image source={Avater3} />,
-        title: 'Onboarding3',
-        subtitle: 'Done with React Native Onboarding Swiper',
+
+        title: 'Review and Share',
+        subtitle: 'Review and share your experience with others.',
+      },
+      {
+        backgroundColor: '#060512',
+
+        title: 'Join the Community',
+        subtitle: 'Connect with fellow enthusiasts and organizers',
+      },
+      {
+        backgroundColor: '#060512',
+  
+        title: 'Flexable Payments',
+        subtitle: 'Choose secure payment methods that works for you.',
       },
   ]}
 />
@@ -38,6 +55,20 @@ export default function OnBoardingPage({navigation}) {
 
 const styles = StyleSheet.create({
     onBoardingContainer: {
-    height: '100%'
+    height: '100%',
+    justifyContent: 'center'
   },
+  firstPageContainer: {
+    alignItems: 'center',
+  },
+  logo: {
+  
+  },
+  firstPageTitle: {
+    color: '#fff',
+    fontSize: 28,
+    textAlign: 'center',
+    marginTop: -30,
+  },
+
 });

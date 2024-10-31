@@ -14,7 +14,7 @@ export default function App() {
   const [isFirstLaunch, setIsFirstLaunch] = useState(null)
   return (
     <NavigationContainer>
-      <Stack.Navigator  initialRouteName="forgot">
+      <Stack.Navigator  initialRouteName="onboard">
       <Stack.Screen name="onboard" options={{ headerShown: false }}  component={OnBoardingPage} />
         <Stack.Screen name="login" options={{ headerShown: false }}  component={Login} />
         <Stack.Screen name="signup" options={{ headerShown: false }}  component={Signup} />
